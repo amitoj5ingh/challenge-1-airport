@@ -24,12 +24,11 @@ As an air traffic controller, I want to override the capacity of the airport, so
 
 | Objects | Properties | Messages | Outputs |
 | --- | --- | --- | --- |
-| Airport | capacity@Integer | changeCapacity(@Integer) | @Void |
+| Airport | capacity@Integer | setCapacity(@Integer) | @Void |
 
 ### Tests
 1. The capacity integer is set to match the user input.
-2. The integer input by the user is a positive number (>= 0).
-3. The integer input by the user is different to the current capacity.
+2. The integer input by the user is different to the current capacity.
 
 ## User Story 3
 
