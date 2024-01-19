@@ -8,7 +8,10 @@ class Airport {
 
     // Setters
     setCapacity(newCapacity) {
-        if (newCapacity >= 0) {
+        if (newCapacity === this.#capacity) {
+            return ("New capacity cannot match old capacity.");
+        }
+        else if (newCapacity >= 0) {
             this.#capacity = newCapacity;
         } else {
             return false;
