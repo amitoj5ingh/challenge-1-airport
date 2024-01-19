@@ -1,5 +1,13 @@
 class Airport {
     #capacity = 0;
+    airplanes = [];
+
+    addPlane(airplane) {
+        if (this.#capacity > this.airplanes.length) {
+            this.airplanes.push(airplane);
+        }
+
+    }
 
     // Getters
     getCapacity() {
