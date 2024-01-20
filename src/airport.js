@@ -3,6 +3,13 @@ class Airport {
     airplanes = [];
 
     addPlane(airplane) {
+
+        for (let i = 0; i < this.airplanes.length; i++) {
+            if (airplane.getId() === this.airplanes[i].getId()) {
+                return;
+            }
+        }
+
         if (this.#capacity > this.airplanes.length) {
             this.airplanes.push(airplane);
         }

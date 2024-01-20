@@ -133,13 +133,15 @@ testResult = null;
 
 // Test 2
 testName = "Test 3.2: The plane id is not already in the array of planes.";
+
+// Arrange
 airport = new Airport();
 airport.setCapacity(3);
 plane1 = new Plane("Plane 1");
 plane2 = new Plane("Plane 2");
 plane3 = new Plane("Plane 2"); // Same id as plane2
 plane4 = new Plane("Plane 4");
-expectedOutput = "Plane 3";
+expectedOutput = "Plane 4";
 
 // Act
 airport.addPlane(plane1);
