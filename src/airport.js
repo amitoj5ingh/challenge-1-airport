@@ -4,7 +4,7 @@ class Airport {
 
     addPlane(airplane) {
 
-        if (airplane.getId() === null) {
+        if (airplane.getId() === null || airplane.getId() === undefined) {
             return;
         }
 

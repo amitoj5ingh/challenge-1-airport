@@ -186,3 +186,77 @@ console.log(`${testName} passes: ${testResult}; expected: ${expectedOutput} actu
 airport, plane1, plane2 = null;
 expectedOutput, actualOutput = null;
 testResult = null;
+
+// Test 4
+testName = "Test 3.4: The plane id is not undefined.";
+
+// Arrange
+airport = new Airport();
+airport.setCapacity(3);
+plane1 = new Plane("Plane 1");
+plane2 = new Plane();
+expectedOutput = 1;
+
+// Act
+airport.addPlane(plane1);
+airport.addPlane(plane2); // Should not be added
+actualOutput = airport.airplanes.length;
+
+// Assert
+testResult = assertEquals(expectedOutput, actualOutput);
+
+//Report
+console.log(`${testName} passes: ${testResult}; expected: ${expectedOutput} actual: ${actualOutput}`);
+
+//Cleanup
+airport, plane1, plane2 = null;
+expectedOutput, actualOutput = null;
+testResult = null;
+
+// Test 5
+testName = "Test 3.5: The array of planes length is increased by 1."; // Upon reflection this should have been test 3.1
+
+// Arrange
+airport = new Airport();
+airport.setCapacity(3);
+plane1 = new Plane("Plane 1");
+expectedOutput = 1;
+
+// Act
+airport.addPlane(plane1);
+actualOutput = airport.airplanes.length;
+
+// Assert
+testResult = assertEquals(expectedOutput, actualOutput);
+
+//Report
+console.log(`${testName} passes: ${testResult}; expected: ${expectedOutput} actual: ${actualOutput}`);
+
+//Cleanup
+airport, plane1 = null;
+expectedOutput, actualOutput = null;
+testResult = null;
+
+// Test 6
+testName = "Test 3.6: After adding the plane, the array of planes contains the plane id."; // As above, this should have been test 3.2
+
+// Arrange
+airport = new Airport();
+airport.setCapacity(3);
+plane1 = new Plane("Plane 1");
+expectedOutput = "Plane 1";
+
+// Act
+airport.addPlane(plane1);
+actualOutput = airport.airplanes[0].getId();
+
+// Assert
+testResult = assertEquals(expectedOutput, actualOutput);
+
+//Report
+console.log(`${testName} passes: ${testResult}; expected: ${expectedOutput} actual: ${actualOutput}`);
+
+//Cleanup
+airport, plane1 = null;
+expectedOutput, actualOutput = null;
+testResult = null;
