@@ -260,3 +260,31 @@ console.log(`${testName} passes: ${testResult}; expected: ${expectedOutput} actu
 airport, plane1 = null;
 expectedOutput, actualOutput = null;
 testResult = null;
+
+// User Story 4
+// Test 1
+testName = "The array of planes length is decreased by 1.";
+
+// Arrange
+airport = new Airport();
+airport.setCapacity(3);
+plane1 = new Plane("Plane 1");
+plane2 = new Plane("Plane 2");
+airport.addPlane(plane1);
+airport.addPlane(plane2);
+expectedOutput = 1;
+
+// Act
+airport.removePlane(plane1);
+actualOutput = airport.airplanes.length;
+
+// Assert
+testResult = assertEquals(expectedOutput, actualOutput);
+
+// Report
+console.log(`${testName} passes: ${testResult}; expected: ${expectedOutput} actual: ${actualOutput}`);
+
+// Cleanup
+airport, plane1, plane2 = null;
+expectedOutput, actualOutput = null;
+testResult = null;

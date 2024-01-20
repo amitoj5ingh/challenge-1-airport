@@ -20,6 +20,14 @@ class Airport {
 
     }
 
+    removePlane(airplane) {
+        for (let i = 0; i < this.airplanes.length; i++) {
+            if (airplane.getId() === this.airplanes[i].getId()) {
+                this.airplanes.splice(i, 1); // Splice method taken from stackoverflow
+            }
+        }
+    }
+
     // Getters
     getCapacity() {
         return this.#capacity;

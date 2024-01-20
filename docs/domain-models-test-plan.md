@@ -62,6 +62,5 @@ As an air traffic controller, I want to instruct a plane to take off from the ai
 | Plane | id@String |  |  |
 
 ### Tests
-1. The plane id is in the array of planes.
-2. The array of planes length is decreased by 1.
-3. After removing the plane, the array of planes does not contain the plane id.
+1. The array of planes length is decreased by 1.
+2. After removing the plane, the array of planes does not contain the plane id.
