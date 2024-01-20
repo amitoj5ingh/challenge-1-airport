@@ -4,6 +4,10 @@ class Airport {
 
     addPlane(airplane) {
 
+        if (airplane.getId() === null) {
+            return;
+        }
+
         for (let i = 0; i < this.airplanes.length; i++) {
             if (airplane.getId() === this.airplanes[i].getId()) {
                 return;

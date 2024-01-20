@@ -46,8 +46,9 @@ As an air traffic controller, I want to instruct a plane to land at the airport,
 1. The array of planes does not exceed the capacity.
 2. The plane id is not already in the array of planes.
 3. The plane id is not null.
-4. The array of planes length is increased by 1.
-5. After adding the plane, the array of planes contains the plane id.
+4. The plane id is not undefined.
+5. The array of planes length is increased by 1.
+6. After adding the plane, the array of planes contains the plane id.
 
 ## User Story 4
 

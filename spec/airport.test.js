@@ -160,3 +160,29 @@ console.log(`${testName} passes: ${testResult}; expected: ${expectedOutput} actu
 airport, plane1, plane2, plane3, plane4 = null;
 expectedOutput, actualOutput = null;
 testResult = null;
+
+// Test 3
+testName = "Test 3.3: The plane id is not null.";
+
+// Arrange
+airport = new Airport();
+airport.setCapacity(3);
+plane1 = new Plane("Plane 1");
+plane2 = new Plane(null);
+expectedOutput = 1;
+
+// Act
+airport.addPlane(plane1);
+airport.addPlane(plane2); // Should not be added
+actualOutput = airport.airplanes.length;
+
+// Assert
+testResult = assertEquals(expectedOutput, actualOutput);
+
+//Report
+console.log(`${testName} passes: ${testResult}; expected: ${expectedOutput} actual: ${actualOutput}`);
+
+//Cleanup
+airport, plane1, plane2 = null;
+expectedOutput, actualOutput = null;
+testResult = null;
