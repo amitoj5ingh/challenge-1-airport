@@ -29,6 +29,7 @@ expectedOutput = null;
 actualOutput = null;
 testResult = null;
 
+
 // Test 2
 testName = "Test 1.2: The integer input by the user is a positive number (>= 0).";
 
@@ -50,6 +51,8 @@ airport = null;
 expectedOutput = null;
 actualOutput = null;
 testResult = null;
+
+
 
 // User Story 2
 // Test 1
@@ -76,6 +79,7 @@ expectedOutput = null;
 actualOutput = null;
 testResult = null;
 
+
 // Test 2
 testName = "Test 2.2: The integer input by the user is different to the current capacity.";
 
@@ -99,6 +103,8 @@ airport = null;
 expectedOutput = null;
 actualOutput = null;
 testResult = null;
+
+
 
 // User Story 3
 // Test 1
@@ -131,6 +137,7 @@ airport, plane1, plane2, plane3, plane4 = null;
 expectedOutput, actualOutput = null;
 testResult = null;
 
+
 // Test 2
 testName = "Test 3.2: The plane id is not already in the array of planes.";
 
@@ -161,6 +168,7 @@ airport, plane1, plane2, plane3, plane4 = null;
 expectedOutput, actualOutput = null;
 testResult = null;
 
+
 // Test 3
 testName = "Test 3.3: The plane id is not null.";
 
@@ -186,6 +194,7 @@ console.log(`${testName} passes: ${testResult}; expected: ${expectedOutput} actu
 airport, plane1, plane2 = null;
 expectedOutput, actualOutput = null;
 testResult = null;
+
 
 // Test 4
 testName = "Test 3.4: The plane id is not undefined.";
@@ -213,6 +222,7 @@ airport, plane1, plane2 = null;
 expectedOutput, actualOutput = null;
 testResult = null;
 
+
 // Test 5
 testName = "Test 3.5: The array of planes length is increased by 1."; // Upon reflection this should have been test 3.1
 
@@ -236,6 +246,7 @@ console.log(`${testName} passes: ${testResult}; expected: ${expectedOutput} actu
 airport, plane1 = null;
 expectedOutput, actualOutput = null;
 testResult = null;
+
 
 // Test 6
 testName = "Test 3.6: After adding the plane, the array of planes contains the plane id."; // As above, this should have been test 3.2
@@ -261,9 +272,11 @@ airport, plane1 = null;
 expectedOutput, actualOutput = null;
 testResult = null;
 
+
+
 // User Story 4
 // Test 1
-testName = "The array of planes length is decreased by 1.";
+testName = "Test 4.1: The array of planes length is decreased by 1.";
 
 // Arrange
 airport = new Airport();
@@ -277,6 +290,34 @@ expectedOutput = 1;
 // Act
 airport.removePlane(plane1);
 actualOutput = airport.airplanes.length;
+
+// Assert
+testResult = assertEquals(expectedOutput, actualOutput);
+
+// Report
+console.log(`${testName} passes: ${testResult}; expected: ${expectedOutput} actual: ${actualOutput}`);
+
+// Cleanup
+airport, plane1, plane2 = null;
+expectedOutput, actualOutput = null;
+testResult = null;
+
+
+// Test 2
+testName = "Test 4.2: After removing the plane, the array of planes does not contain the plane id.";
+
+// Arrange
+airport = new Airport();
+airport.setCapacity(3);
+plane1 = new Plane("Plane 1");
+plane2 = new Plane("Plane 2");
+airport.addPlane(plane1);
+airport.addPlane(plane2);
+expectedOutput = "Plane 1";
+
+// Act
+airport.removePlane(plane2);
+actualOutput = airport.airplanes[airport.airplanes.length - 1].getId(); // Check last item in array
 
 // Assert
 testResult = assertEquals(expectedOutput, actualOutput);
