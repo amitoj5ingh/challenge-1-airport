@@ -15,6 +15,12 @@ class Airport {
             }
         }
 
+        // Generative AI has been used to implement this loop
+        // This loop is used to check if the weather is stormy
+        if (this.weather === "Stormy") {
+            return;
+        }
+
         if (this.#capacity > this.airplanes.length) {
             this.airplanes.push(airplane);
         }
