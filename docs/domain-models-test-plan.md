@@ -64,3 +64,44 @@ As an air traffic controller, I want to instruct a plane to take off from the ai
 ### Tests
 1. The array of planes length is decreased by 1.
 2. After removing the plane, the array of planes does not contain the plane id.
+
+## User Story 5
+Generative AI is used to help create and implement the following user stories.
+
+As an air traffic controller, I want to be able to set the weather, so that I can keep the software updated with the current weather conditions.
+
+### Domain Model
+
+| Objects | Properties | Messages | Outputs |
+| --- | --- | --- | --- |
+| Airport | weather@String | setWeather(@String) | @Void |
+
+### Tests
+1. The weather string is set to match the user input.
+
+## User Story 6
+
+As an air traffic controller, I want to prevent landing when the weather is stormy, so that the planes or passengers are not compromised.
+
+### Domain Model
+
+| Objects | Properties | Messages | Outputs |
+| --- | --- | --- | --- |
+| Airport | weather@String | getWeather() | @String |
+|  | airplanes@Array[@Planes] | addPlane() | @Void |
+| Plane | id@String |  |  |
+
+### Tests
+1. A plane cannot land when the weather is stormy.
+
+## User Story 7
+
+As an air traffic controller, I want to prevent takeoff when weather is stormy, so that planes or passengers are not compromised.
+
+### Domain Model
+
+| Objects | Properties | Messages | Outputs |
+| --- | --- | --- | --- |
+| Airport | weather@String | getWeather() | @String |
+|  | airplanes@Array[@Planes] | removePlane() | @Void |
+| Plane | id@String |  |  |
