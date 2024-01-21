@@ -13,6 +13,14 @@ import Plane from './plane.js';
 // Show duplicate id cannot be added to airport
 // Show null or undefined id cannot be added to airport
 
+// Generative AI has been used to implement the following comments
+// Set the weather to stormy
+// Attempt to remove a plane from the airport
+// Show the plane has not been removed
+// Set the weather to sunny
+// Attempt to remove a plane from the airport
+// Show the plane has been removed
+
 console.log("- Create an airport")
 let airport = new Airport();
 console.log(`An empty airport: ${airport.airplanes}`);
@@ -64,3 +72,20 @@ let undefinedPlane = new Plane(undefined);
 airport.addPlane(nullPlane);
 airport.addPlane(undefinedPlane);
 console.log(`Number of planes currently at the airport: ${airport.airplanes.length}`);
+
+// Generative AI has been used to implement the following
+console.log("- Set the weather to stormy")
+airport.setWeather("Stormy");
+console.log(`The weather has been set to ${airport.getWeather()}`);
+
+console.log("- Attempt to remove a plane from the airport")
+airport.removePlane(plane1);
+console.log(`Planes remaining at the airport: ${airport.airplanes.length}`);
+
+console.log("- Set the weather to sunny")
+airport.setWeather("Sunny");
+console.log(`The weather has been set to ${airport.getWeather()}`);
+
+console.log("- Attempt to remove a plane from the airport")
+airport.removePlane(plane1);
+console.log(`Planes remaining at the airport: ${airport.airplanes.length}`);
