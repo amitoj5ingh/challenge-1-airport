@@ -105,3 +105,6 @@ As an air traffic controller, I want to prevent takeoff when weather is stormy, 
 | Airport | weather@String | getWeather() | @String |
 |  | airplanes@Array[@Planes] | removePlane() | @Void |
 | Plane | id@String |  |  |
+
+### Tests
+1. A plane cannot take off when the weather is stormy.

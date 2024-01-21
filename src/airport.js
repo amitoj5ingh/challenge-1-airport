@@ -28,6 +28,12 @@ class Airport {
     }
 
     removePlane(airplane) {
+        // Generative AI has been used to implement this loop
+        // This loop is used to check if the weather is stormy
+        if (this.weather === "Stormy") {
+            return;
+        }
+
         for (let i = 0; i < this.airplanes.length; i++) {
             if (airplane.getId() === this.airplanes[i].getId()) {
                 this.airplanes.splice(i, 1); // Splice method taken from stackoverflow
