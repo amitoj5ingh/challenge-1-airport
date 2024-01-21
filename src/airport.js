@@ -1,6 +1,7 @@
 class Airport {
     #capacity = 0;
     airplanes = [];
+    weather = "";
 
     addPlane(airplane) {
 
@@ -26,6 +27,16 @@ class Airport {
                 this.airplanes.splice(i, 1); // Splice method taken from stackoverflow
             }
         }
+    }
+
+    // Generative AI has been used to implement this function
+    setWeather(weather) {
+        this.weather = weather;
+    }
+
+    // Generative AI has been used to implement this function
+    getWeather() {
+        return this.weather;
     }
 
     // Getters
